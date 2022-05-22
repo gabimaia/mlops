@@ -11,7 +11,7 @@ import json
 
 person = {
         "Age": 72,
-        "sex": 'M',
+        "Sex": 'M',
         "ChestPainType": 'NAP',
         "RestingBP": 120,
         "Cholesterol": 304,
@@ -19,7 +19,7 @@ person = {
         "RestingECG": 'Normal',
         "MaxHR": 120,
         "ExerciseAngina": 'Y',
-        "Oldpeak": 1.0,	
+        "Oldpeak": 1.0,
         "ST_Slope": 'Up',
     }
 

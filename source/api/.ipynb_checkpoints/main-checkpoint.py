@@ -23,7 +23,7 @@ setattr(sys.modules["__main__"], "NumericalTransformer", NumericalTransformer)
 artifact_model_name = "Decision_tree_heart_disease/model_export:latest"
 
 # initiate the wandb project
-run = wandb.init(project="decision_tree",job_type="api")
+run = wandb.init(project="Decision_tree_heart_disease",job_type="api")
 
 # create the api
 app = FastAPI()
@@ -31,7 +31,7 @@ app = FastAPI()
 # declare request example data using pydantic
 # a person in our dataset has the following attributes
 class Person(BaseModel):
-    age: int
+    Age: int
     Sex: str
     ChestPainType: str
     RestingBP: int
@@ -47,7 +47,7 @@ class Person(BaseModel):
         schema_extra = {
             "example": {
                 "Age": 72,
-                "sex": 'M',
+                "Sex": 'M',
                 "ChestPainType": 'NAP',
                 "RestingBP": 120,
                 "Cholesterol": 304,
@@ -55,7 +55,7 @@ class Person(BaseModel):
                 "RestingECG": 'Normal',
                 "MaxHR": 120,
                 "ExerciseAngina": 'Y',
-                "Oldpeak": 1.0,	
+                "Oldpeak": 1.0,
                 "ST_Slope": 'Up',
             }
         }
@@ -87,5 +87,7 @@ async def get_inference(person: Person):
 
     # Predict test data
     predict = pipe.predict(df)
+    
+    return str(predict[0])
 
-    return "HeartDisease" if predict[0] <= 0.5 else "NoHeartDisease"
+    return "NoHeartDisease" if predict[0] <= 0.5 else "HeartDisease"

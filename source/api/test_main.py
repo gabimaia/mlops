@@ -18,53 +18,47 @@ def test_root():
     assert r.status_code == 200
 
 # a unit test that tests the status code and response 
-# for an instance with a low income
+# for an instance with no heart disease
 def test_get_inference_low_income():
 
     person = {
-        "age": 72,
-        "workclass": 'Self-emp-inc',
-        "fnlwgt": 473748,
-        "education": 'Some-college',
-        "education_num": 10,
-        "marital_status": 'Married-civ-spouse',
-        "occupation": 'Exec-managerial',
-        "relationship": 'Husband',
-        "race": 'White',
-        "sex": 'Male',
-        "capital_gain": 0,
-        "capital_loss": 0,
-        "hours_per_week": 25,
-        "native_country": 'United-States'
+        "Age": 54,
+        "Sex": 'F',
+        "ChestPainType": 'NAP',
+        "RestingBP": 135,
+        "Cholesterol": 304,
+        "FastingBS": 1,
+        "RestingECG": 'Normal',
+        "MaxHR": 170,
+        "ExerciseAngina": 'N',
+        "Oldpeak": 0.0,	
+        "ST_Slope": 'Up',
     }
 
     r = client.post("/predict", json=person)
     # print(r.json())
     assert r.status_code == 200
-    assert r.json() == "low income <=50K"
+    assert r.json() == ""
 
 # a unit test that tests the status code and response 
-# for an instance with a high income
+# for an instance with a heart disease
 def test_get_inference_high_income():
 
     person = {
-        "age": 46,
-        "workclass": 'Private',
-        "fnlwgt": 364548,
-        "education": 'Bachelors',
-        "education_num": 13,
-        "marital_status": 'Divorced',
-        "occupation": 'Sales',
-        "relationship": 'Not-in-family',
-        "race": 'White',
-        "sex": 'Male',
-        "capital_gain": 8614,
-        "capital_loss": 0,
-        "hours_per_week": 40,
-        "native_country": 'United-States'
+        "Age": 60,
+        "Sex": 'M',
+        "ChestPainType": 'NAP',
+        "RestingBP": 115,
+        "Cholesterol": 100,
+        "FastingBS": 1,
+        "RestingECG": 'Normal',
+        "MaxHR": 143,
+        "ExerciseAngina": 'N',
+        "Oldpeak": 2.4,
+        "ST_Slope": 'Up',
     }
 
     r = client.post("/predict", json=person)
     print(r.json())
     assert r.status_code == 200
-    assert r.json() == "high income >50K"
+    assert r.json() == ""
