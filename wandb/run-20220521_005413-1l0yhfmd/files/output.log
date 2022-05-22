@@ -1,0 +1,24 @@
+[32mINFO[39m:     Started server process [[36m49291[39m]
+[32mINFO[39m:     Waiting for application startup.
+[32mINFO[39m:     Application startup complete.
+[32mINFO[39m:     127.0.0.1:36112 - "[1mGET / HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36150 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36150 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36152 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:36222 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     Shutting down
+[32mINFO[39m:     Waiting for application shutdown.
+[32mINFO[39m:     Application shutdown complete.
+[32mINFO[39m:     Finished server process [[36m49291[39m]
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
