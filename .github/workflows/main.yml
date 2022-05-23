@@ -1,25 +1,34 @@
-name: Python package # Name of the Action.
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
 
-on: [push] # When this action runs.
-
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+  # This workflow contains a single job called "build"
   build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
 
-    runs-on: ubuntu-latest # Which OS this runs on, you can also build on Windows or MacOS.
-    strategy:
-      matrix:
-        python-version: [3.6, 3.7, 3.8] # You can build against multiple Python versions.
-
+    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - uses: actions/checkout@v2 # Calling a pre-built GitHub Action which allows your Action to access your repository.
-    - name: Set up Python ${{ matrix.python-version }} # Name of an action that sets up Python.
-      uses: actions/setup-python@v2 # A pre-built GitHub Action that sets up a Python environment.
-      with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install dependencies # The first step that isn't just calling another action.
-      run: |
-        python -m pip install --upgrade pip # Upgrade pip to the latest version.
-        pip install pytest # Install pytest.
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi # If we have a requirements.txt, then install it.
-    - name: Test with pytest # Final action which runs pytest. If any test fails, then this Action fails.
-      run: |
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      - name: Setup Python
+        uses: actions/setup-python@v3.0.0
+        with:
+          # Version range or exact version of a Python version to use, using SemVer's version range syntax.
+          python-version: 3.8
+
+      - name: Install dependences
+        run: pip install --upgrade pip && pip install -r requirements.txt
+
+      - name: Login in wandb
+        run:
+          wandb login ${{ secrets.WANDB_KEY_ID }}
+
+      - name: Testing API
+        run:
+          pytest source/api -vv -s
