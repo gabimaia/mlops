@@ -38,7 +38,7 @@ def test_get_inference_low_income():
     r = client.post("/predict", json=person)
     # print(r.json())
     assert r.status_code == 200
-    assert r.json() == ""
+    assert r.json() == " "
 
 # a unit test that tests the status code and response 
 # for an instance with a heart disease
@@ -61,4 +61,4 @@ def test_get_inference_high_income():
     r = client.post("/predict", json=person)
     print(r.json())
     assert r.status_code == 200
-    assert r.json() == ""
+    assert r.json() == " "
