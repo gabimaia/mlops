@@ -1,0 +1,24 @@
+{
+    "os": "Linux-5.4.0-113-generic-x86_64-with-glibc2.10",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-05-31T00:50:25.678146",
+    "startedAt": "2022-05-31T00:50:22.163719",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "source.api.main:app",
+        "--reload"
+    ],
+    "state": "running",
+    "program": "/home/gabriel/anaconda3/envs/mlops/bin/uvicorn",
+    "git": {
+        "remote": "git@github.com:gabimaia/mlops.git",
+        "commit": "5aa13373219c8dbe332fa9e9ca108024e8d8c69c"
+    },
+    "email": "gbrlmdm@gmail.com",
+    "root": "/home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops",
+    "host": "gabriel-Aspire-A515-52G",
+    "username": "gabriel",
+    "executable": "/home/gabriel/anaconda3/envs/mlops/bin/python"
+}

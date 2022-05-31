@@ -59,7 +59,7 @@ class Person(BaseModel):
                 "ST_Slope": 'Up',
             }
         }
-        #"Age	Sex	ChestPainType	RestingBP	Cholesterol	FastingBS	RestingECG	MaxHR	ExerciseAngina	Oldpeak	ST_Slope"
+  
 
 # give a greeting using GET
 @app.get("/", response_class=HTMLResponse)
@@ -88,6 +88,6 @@ async def get_inference(person: Person):
     # Predict test data
     predict = pipe.predict(df)
     
-    return str(predict[0])
+    #return str(predict[0])
 
     return "NoHeartDisease" if predict[0] <= 0.5 else "HeartDisease"
