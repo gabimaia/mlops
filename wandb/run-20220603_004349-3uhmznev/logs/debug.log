@@ -24,3 +24,13 @@ config: {}
 2022-06-03 00:43:56,239 INFO    MainThread:147540 [wandb_run.py:_redirect():1774] Redirecting console.
 2022-06-03 00:43:56,245 INFO    MainThread:147540 [wandb_run.py:_redirect():1830] Redirects installed.
 2022-06-03 00:43:56,245 INFO    MainThread:147540 [wandb_init.py:init():685] run started, returning control to user process
+2022-06-03 01:14:18,452 INFO    MainThread:147540 [wandb_run.py:_atexit_cleanup():1865] got exitcode: 1
+2022-06-03 01:14:18,456 INFO    MainThread:147540 [wandb_run.py:_restore():1837] restore
+2022-06-03 01:14:25,907 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None
+2022-06-03 01:14:31,009 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None
+2022-06-03 01:14:36,110 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None
+2022-06-03 01:14:41,211 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None
+2022-06-03 01:14:46,312 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None
+2022-06-03 01:14:51,413 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None
+2022-06-03 01:14:56,514 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None
+2022-06-03 01:15:01,615 INFO    MainThread:147540 [wandb_run.py:_on_finish():1995] got exit ret: None

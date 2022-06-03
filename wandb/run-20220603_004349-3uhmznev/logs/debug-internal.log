@@ -300,3 +300,34 @@
 2022-06-03 01:10:45,223 INFO    Thread-7  :147646 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/output.log
 2022-06-03 01:10:56,442 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
 2022-06-03 01:11:26,568 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:11:56,695 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:12:26,817 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:12:56,956 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:13:27,081 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:13:57,236 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:14:18,335 WARNING MainThread:147646 [internal.py:wandb_internal():155] Internal process interrupt: 1
+2022-06-03 01:14:19,399 INFO    Thread-7  :147646 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/output.log
+2022-06-03 01:14:21,400 INFO    Thread-7  :147646 [dir_watcher.py:_on_file_modified():230] file/dir modified: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/output.log
+2022-06-03 01:14:27,392 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:14:57,480 DEBUG   SenderThread:147646 [sender.py:send():235] send: stats
+2022-06-03 01:15:05,931 WARNING MainThread:147646 [internal.py:wandb_internal():155] Internal process interrupt: 2
+2022-06-03 01:15:05,931 ERROR   MainThread:147646 [internal.py:wandb_internal():158] Internal process interrupted.
+2022-06-03 01:15:06,482 INFO    WriterThread:147646 [datastore.py:close():281] close: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/run-3uhmznev.wandb
+2022-06-03 01:15:06,483 INFO    SenderThread:147646 [sender.py:finish():1107] shutting down sender
+2022-06-03 01:15:06,484 INFO    SenderThread:147646 [dir_watcher.py:finish():283] shutting down directory watcher
+2022-06-03 01:15:06,491 INFO    HandlerThread:147646 [handler.py:finish():790] shutting down handler
+2022-06-03 01:15:07,413 INFO    SenderThread:147646 [dir_watcher.py:finish():313] scan: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files
+2022-06-03 01:15:07,413 INFO    SenderThread:147646 [dir_watcher.py:finish():327] scan save: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/wandb-summary.json wandb-summary.json
+2022-06-03 01:15:07,414 INFO    SenderThread:147646 [dir_watcher.py:finish():327] scan save: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/output.log output.log
+2022-06-03 01:15:07,414 INFO    SenderThread:147646 [dir_watcher.py:finish():327] scan save: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/conda-environment.yaml conda-environment.yaml
+2022-06-03 01:15:07,415 INFO    SenderThread:147646 [dir_watcher.py:finish():327] scan save: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/wandb-metadata.json wandb-metadata.json
+2022-06-03 01:15:07,415 INFO    SenderThread:147646 [dir_watcher.py:finish():327] scan save: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/requirements.txt requirements.txt
+2022-06-03 01:15:07,415 INFO    SenderThread:147646 [dir_watcher.py:finish():327] scan save: /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/config.yaml config.yaml
+2022-06-03 01:15:07,418 INFO    SenderThread:147646 [file_pusher.py:finish():145] shutting down file pusher
+2022-06-03 01:15:07,418 INFO    SenderThread:147646 [file_pusher.py:join():150] waiting for file pusher
+2022-06-03 01:15:08,517 INFO    Thread-16 :147646 [upload_job.py:push():137] Uploaded file /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/config.yaml
+2022-06-03 01:15:08,539 INFO    Thread-13 :147646 [upload_job.py:push():137] Uploaded file /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/output.log
+2022-06-03 01:15:08,542 INFO    Thread-12 :147646 [upload_job.py:push():137] Uploaded file /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/wandb-summary.json
+2022-06-03 01:15:08,574 INFO    Thread-14 :147646 [upload_job.py:push():137] Uploaded file /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/conda-environment.yaml
+2022-06-03 01:15:08,599 INFO    Thread-15 :147646 [upload_job.py:push():137] Uploaded file /home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/wandb/run-20220603_004349-3uhmznev/files/requirements.txt
+2022-06-03 01:15:09,154 INFO    MainThread:147646 [internal.py:handle_exit():82] Internal process exited

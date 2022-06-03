@@ -1,0 +1,93 @@
+[32mINFO[39m:     Started server process [[36m151932[39m]
+[32mINFO[39m:     Waiting for application startup.
+[32mINFO[39m:     Application startup complete.
+[32mINFO[39m:     127.0.0.1:47916 - "[1mGET / HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:47916 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:47916 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:47918 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[31mERROR[39m:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/uvicorn/protocols/http/h11_impl.py", line 366, in run_asgi
+    result = await app(self.scope, self.receive, self.send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/uvicorn/middleware/proxy_headers.py", line 75, in __call__
+    return await self.app(scope, receive, send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/fastapi/applications.py", line 259, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/applications.py", line 112, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/middleware/errors.py", line 181, in __call__
+    raise exc
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/middleware/errors.py", line 159, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/exceptions.py", line 82, in __call__
+    raise exc
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/exceptions.py", line 71, in __call__
+    await self.app(scope, receive, sender)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 21, in __call__
+    raise e
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/routing.py", line 656, in __call__
+    await route.handle(scope, receive, send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/routing.py", line 259, in handle
+    await self.app(scope, receive, send)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/starlette/routing.py", line 61, in app
+    response = await func(request)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/fastapi/routing.py", line 226, in app
+    raw_response = await run_endpoint_function(
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/fastapi/routing.py", line 159, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops/./source/api/main.py", line 89, in get_inference
+    predict = pipe.predict(df)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/utils/metaestimators.py", line 113, in <lambda>
+    out = lambda *args, **kwargs: self.fn(obj, *args, **kwargs)  # noqa
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/pipeline.py", line 469, in predict
+    Xt = transform.transform(Xt)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/pipeline.py", line 1222, in transform
+    Xs = Parallel(n_jobs=self.n_jobs)(
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/joblib/parallel.py", line 1043, in __call__
+    if self.dispatch_one_batch(iterator):
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/joblib/parallel.py", line 861, in dispatch_one_batch
+    self._dispatch(tasks)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/joblib/parallel.py", line 779, in _dispatch
+    job = self._backend.apply_async(batch, callback=cb)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/joblib/_parallel_backends.py", line 208, in apply_async
+    result = ImmediateResult(func)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/joblib/_parallel_backends.py", line 572, in __init__
+    self.results = batch()
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/joblib/parallel.py", line 262, in __call__
+    return [func(*args, **kwargs)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/joblib/parallel.py", line 262, in <listcomp>
+    return [func(*args, **kwargs)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/utils/fixes.py", line 216, in __call__
+    return self.function(*args, **kwargs)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/pipeline.py", line 876, in _transform_one
+    res = transformer.transform(X)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/utils/metaestimators.py", line 113, in <lambda>
+    out = lambda *args, **kwargs: self.fn(obj, *args, **kwargs)  # noqa
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/pipeline.py", line 647, in transform
+    Xt = transform.transform(Xt)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/preprocessing/_encoders.py", line 509, in transform
+    X_int, X_mask = self._transform(
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/site-packages/sklearn/preprocessing/_encoders.py", line 142, in _transform
+    raise ValueError(msg)
+ValueError: Found unknown categories ['H'] in column 0 during transform
+[32mINFO[39m:     127.0.0.1:47946 - "[1mPOST /predict HTTP/1.1[22m" [91m500 Internal Server Error
+[32mINFO[39m:     127.0.0.1:47962 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     Shutting down
+[32mINFO[39m:     Waiting for application shutdown.
+[32mINFO[39m:     Application shutdown complete.
+[32mINFO[39m:     Finished server process [[36m151932[39m]
+Process SpawnProcess-1:
+Traceback (most recent call last):
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/process.py", line 318, in _bootstrap
+    util._exit_function()
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/util.py", line 357, in _exit_function
+    p.join()
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/process.py", line 149, in join
+    res = self._popen.wait(timeout)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/popen_fork.py", line 47, in wait
+    return self.poll(os.WNOHANG if timeout == 0.0 else 0)
+  File "/home/gabriel/anaconda3/envs/mlops/lib/python3.8/multiprocessing/popen_fork.py", line 27, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt
