@@ -69,7 +69,7 @@ async def root():
     """<p><span style="font-size:20px">In this project, we will apply the skills """\
         """acquired in the Deploying a Scalable ML Pipeline in Production course to develop """\
         """a classification model on publicly available"""\
-        """<a href="https://archive.ics.uci.edu/ml/datasets/statlog+(heart)"></a>.</span></p>"""
+        """<a href="https://archive.ics.uci.edu/ml/datasets/statlog+(heart)"> Data </a>.</span></p>"""
 
 # run the model inference and use a Person data structure via POST to the API.
 @app.post("/predict")
@@ -88,6 +88,4 @@ async def get_inference(person: Person):
     # Predict test data
     predict = pipe.predict(df)
     
-    #return str(predict[0])
-
     return "No Heart Disease" if predict[0] <= 0.5 else "Heart Disease"
