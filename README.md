@@ -9,3 +9,5 @@ The objective of the project is to carry out and implement a model capable of a 
 For this we will use WandB + FastAPI + Heroku.
 
 Students: Jordão Silva and Gabriel Maia
+
+Link to Medium Article: 
