@@ -19,7 +19,7 @@ def test_root():
 
 # a unit test that tests the status code and response 
 # for an instance with no heart disease
-def test_get_inference_low_income():
+def test_get_inference():
 
     person = {
         "Age": 54,
@@ -38,11 +38,11 @@ def test_get_inference_low_income():
     r = client.post("/predict", json=person)
     # print(r.json())
     assert r.status_code == 200
-    assert r.json() == " "
+    assert r.json() == "Heart Disease"
 
 # a unit test that tests the status code and response 
 # for an instance with a heart disease
-def test_get_inference_high_income():
+def test_get_inference():
 
     person = {
         "Age": 60,
@@ -61,4 +61,4 @@ def test_get_inference_high_income():
     r = client.post("/predict", json=person)
     print(r.json())
     assert r.status_code == 200
-    assert r.json() == " "
+    assert r.json() == "No Heart Disease"

@@ -4,3 +4,20 @@
 [32mINFO[39m:     127.0.0.1:46168 - "[1mGET / HTTP/1.1[22m" [32m200 OK
 [32mINFO[39m:     127.0.0.1:46170 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
 [32mINFO[39m:     127.0.0.1:46170 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:46172 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50102 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50102 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50278 - "[1mGET /docs HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50278 - "[1mGET /openapi.json HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:50280 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51088 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51292 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51322 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51358 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51398 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51492 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51526 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     127.0.0.1:51544 - "[1mPOST /predict HTTP/1.1[22m" [32m200 OK
+[32mINFO[39m:     Shutting down
+[32mINFO[39m:     Waiting for application shutdown.
+[32mINFO[39m:     Application shutdown complete.

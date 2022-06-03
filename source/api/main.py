@@ -65,7 +65,7 @@ class Person(BaseModel):
 @app.get("/", response_class=HTMLResponse)
 async def root():
     return """
-    <p><span style="font-size:28px"><strong>Hello World</strong></span></p>"""\
+    <p><span style="font-size:28px"><strong>NICE TO SEE YOU HERE</strong></span></p>"""\
     """<p><span style="font-size:20px">In this project, we will apply the skills """\
         """acquired in the Deploying a Scalable ML Pipeline in Production course to develop """\
         """a classification model on publicly available"""\
@@ -90,4 +90,4 @@ async def get_inference(person: Person):
     
     #return str(predict[0])
 
-    return "NoHeartDisease" if predict[0] <= 0.5 else "HeartDisease"
+    return "No Heart Disease" if predict[0] <= 0.5 else "Heart Disease"
