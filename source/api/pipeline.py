@@ -22,7 +22,7 @@ class FeatureSelector(BaseEstimator, TransformerMixin):
     def transform(self, X, y=None):
         return X[self.feature_names]
 
-# Handling categorical features
+#Handling categorical features
 class CategoricalTransformer(BaseEstimator, TransformerMixin):
     # Class constructor method that takes one boolean as its argument
     def __init__(self, new_features=True, colnames=None):
