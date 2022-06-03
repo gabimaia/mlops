@@ -1,0 +1,5 @@
+[1mcollected 2 items                                                                                                                                    
+source/api/test_main.py::test_root [32mPASSED
+source/api/test_main.py::test_get_inference No Heart Disease
+[32mPASSED
+[32m================================================================= [1m2 passed[22m in 34.07s =================================================================

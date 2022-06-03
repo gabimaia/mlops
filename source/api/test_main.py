@@ -19,7 +19,7 @@ def test_root():
 
 # a unit test that tests the status code and response 
 # for an instance with no heart disease
-def test_get_inference():
+'''def test_get_inference():
 
     person = {
         "Age": 54,
@@ -61,4 +61,4 @@ def test_get_inference():
     r = client.post("/predict", json=person)
     print(r.json())
     assert r.status_code == 200
-    assert r.json() == "No Heart Disease"
+    assert r.json() == "No Heart Disease"'''
