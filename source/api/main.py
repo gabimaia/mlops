@@ -56,7 +56,7 @@ class Person(BaseModel):
                 "MaxHR": 120,
                 "ExerciseAngina": 'Y',
                 "Oldpeak": 1.0,
-                "ST_Slope": 'Up',
+                "ST_Slope": 'Up'
             }
         }
   
