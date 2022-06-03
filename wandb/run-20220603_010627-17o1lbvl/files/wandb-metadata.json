@@ -1,0 +1,25 @@
+{
+    "os": "Linux-5.4.0-113-generic-x86_64-with-glibc2.10",
+    "python": "3.8.13",
+    "heartbeatAt": "2022-06-03T04:06:29.538928",
+    "startedAt": "2022-06-03T04:06:27.928112",
+    "docker": null,
+    "cpu_count": 8,
+    "cuda": null,
+    "args": [
+        "source/api",
+        "-vv",
+        "-s"
+    ],
+    "state": "running",
+    "program": "/home/gabriel/anaconda3/envs/mlops/bin/pytest",
+    "git": {
+        "remote": "git@github.com:gabimaia/mlops.git",
+        "commit": "1ee6304c4d35e0a0cacfb2f81894c7ada5e8207b"
+    },
+    "email": "gbrlmdm@gmail.com",
+    "root": "/home/gabriel/mestrado/disciplinas/machine-learning/mlops/mlops",
+    "host": "gabriel-Aspire-A515-52G",
+    "username": "gabriel",
+    "executable": "/home/gabriel/anaconda3/envs/mlops/bin/python"
+}
