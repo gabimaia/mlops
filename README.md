@@ -11,4 +11,4 @@ For this we will use WandB + FastAPI + Heroku.
 
 Students: Jordão Silva and Gabriel Maia
 
-Link to Medium Article: 
+Link to Medium Article: https://medium.com/@jordao.cassiano.009/deploying-your-ml-model-into-production-using-wandb-fastapi-heroku-558aac33552a
